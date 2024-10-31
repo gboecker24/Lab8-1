@@ -3,9 +3,7 @@
 
 
 #include <iostream>
-#include <cmath>
 #include <cstdlib>
-#include <ctime>
 #include <cstring>
 #include <string>
 
@@ -35,12 +33,14 @@ int main(){
 	
 	string word;
 	
-	cout << "Enter a word: ";
-	cin >> word;
+	cout << "Enter a string or Q to quit: ";
+	getline (cin,word);
 
+	if ( word == "Q") {
+		return 0;
+	}
 
-
-	cout << endl << "Number of vowels: " << countVowel(word);
+	cout << endl << "Vowel count: " << countVowel(word);
 
 	return 0;
 }
